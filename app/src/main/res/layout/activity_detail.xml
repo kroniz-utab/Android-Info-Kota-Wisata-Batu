@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/horizontal_margin"
+    android:paddingRight="@dimen/horizontal_margin"
+    android:paddingEnd="@dimen/vertical_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/horizontal_margin"
+        android:paddingRight="@dimen/horizontal_margin"
+        android:paddingBottom="@dimen/vertical_margin"
+        android:paddingTop="@dimen/vertical_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingRight="@dimen/horizontal_margin"
+            android:paddingEnd="@dimen/vertical_margin">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="250dp">
+                <ImageView
+                    android:id="@+id/img_detail_gambar"
+                    android:layout_width="160dp"
+                    android:layout_height="250dp"
+                    tools:src="@drawable/ic_launcher_background"
+                    android:scaleType="centerCrop"/>
+
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/horizontal_margin"
+                android:paddingLeft="@dimen/horizontal_margin"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rating"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RatingBar
+                        android:id="@+id/rb_rating_detai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:rating="3"
+                        android:stepSize="0.5"
+                        style="@style/Widget.AppCompat.RatingBar.Small"/>
+                    <TextView
+                        android:id="@+id/tv_rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/vertical_margin"
+                        android:textSize="12sp"
+                        tools:text="3.0"/>
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/vertical_margin"
+                    android:layout_marginLeft="@dimen/horizontal_margin"
+                    android:layout_marginRight="@dimen/horizontal_margin"
+                    android:layout_marginTop="@dimen/vertical_margin">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/stock_lokasi"/>
+                        <TextView
+                            android:id="@+id/tv_alamat_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/horizontal_margin"
+                            tools:text="ALAMAT"
+                            android:textColor="@android:color/black"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/stock_telpon"/>
+                        <TextView
+                            android:id="@+id/tv_telepon_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/horizontal_margin"
+                            tools:text="TELEPON"
+                            android:textColor="@android:color/black"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/stock_biaya"/>
+                        <TextView
+                            android:id="@+id/tv_harga_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:paddingLeft="@dimen/horizontal_margin"
+                            tools:text="HARGA"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"/>
+                    </TableRow>
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/stock_waktu"/>
+                        <TextView
+                            android:id="@+id/tv_waktu_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/horizontal_margin"
+                            android:textSize="12sp"
+                            android:layout_weight="1"
+                            tools:text="WAKTU"
+                            android:textColor="@android:color/black"/>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Keterangan :"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tv_subs_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                tools:text="SUBSDETAIL"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
